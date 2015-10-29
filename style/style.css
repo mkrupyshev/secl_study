@@ -386,14 +386,14 @@ body{
 
 .journal {
 	height: 500px;
-	border: solid green;
+	border: solid 1px green;
 }
 
 .table-journal{
 	position: relative;
 	/*Расположение поверх фоновой карты*/
 	width: 100%;
-	max-width: 760px;
+	max-width: 750px;
 	margin: 0 auto;
 	/*Тип блока - таблица*/
 	display: table;
@@ -403,14 +403,25 @@ body{
 .journal-column {
 	display: table-cell;
 	width: 33%;
-	border: solid 1px black;
+	display: table-cell;
 }
 
 .journal-top-row {
 	height: 250px;
-	border: solid 1px blue;
+	display: table-cell;
 }
 .journal-bottom-row {
 	height: 250px;
-	border: solid 1px blue;
+	position: absolute;
+	bottom: 0;
+}
+
+.journal-top-row img {
+	position: relative;
+	width: 100%;
+}
+
+.journal-bottom-row img {
+	position: relative;
+	width: 250px;
 }
