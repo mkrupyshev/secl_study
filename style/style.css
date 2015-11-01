@@ -347,7 +347,8 @@ body{
 
 .about-us-content {
 	position: absolute;
-    top: 147px;
+	margin:0 100px;
+  top: 147px;
 }
 
 
