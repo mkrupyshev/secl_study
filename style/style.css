@@ -310,7 +310,7 @@ body{
 	position: relative;
 	/*Расположение поверх фоновой карты*/
 	z-index: 8;
-	width: 100%;
+	width: 100%;git
 	max-width: 1135px;
 	margin: 0 auto;
 	/*Тип блока - таблица*/
@@ -384,44 +384,275 @@ body{
 	margin: 25px 0 0 0;
 }
 
-.journal {
-	height: 500px;
-	border: solid 1px green;
-}
-
-.table-journal{
+.wave-title{
+	text-align: center;
+	color: #2c2e37;
+	font-size: 30px;
+	font-weight: 700;
+	text-transform: uppercase;
 	position: relative;
-	/*Расположение поверх фоновой карты*/
-	width: 100%;
-	max-width: 750px;
-	margin: 0 auto;
-	/*Тип блока - таблица*/
-	display: table;
-	height: 500px;
+	padding: 28px 0;
 }
-
-.journal-column {
-	display: table-cell;
-	width: 33%;
-	display: table-cell;
-}
-
-.journal-top-row {
-	height: 250px;
-	display: table-cell;
-}
-.journal-bottom-row {
-	height: 250px;
+/*Сама волна*/
+.wave-title:before{
+	content: " ";
+	display: inline-block;
+	width: 81px;
+	height: 7px;
+	background: url(../images/waves.png);
 	position: absolute;
-	bottom: 0;
+	top: 0;
+	left: 46%;
 }
 
-.journal-top-row img {
+/*Ряд пазла*/
+.puzzle{
+	width: 1140px;
+	display: table;
+	margin: 0 auto;
+}
+/*Обертка пазла*/
+.puzzle-wrap{
+	width: 1140px;
+	margin: 0 auto;
+	-webkit-box-shadow: 0px 0px 5px 1px grey;
+	-moz-box-shadow: 0px 0px 5px 1px grey;
+	-o-box-shadow: 0px 0px 5px 1px grey;
+	-ms-box-shadow: 0px 0px 5px 1px grey;
+	box-shadow: 0px 0px 5px 1px grey;
+}
+/*Колонка пазла*/
+.puzzle-column{
+	display: table-cell;
+	width: 33.3%;
+	text-align: center;
+	vertical-align: middle;
+	padding: 0 10px;
 	position: relative;
+}
+/*Название текста в пазле*/
+.puzzle-name{
+	font-size: 11px;
+	font-weight: 700;
+	color: #16b5ef;
+	text-transform: uppercase;
+	margin-bottom: 30px;
+}
+/*Заголовок текста в пазле*/
+.puzzle-title{
+	font-size: 16px;
+	color: #212121;
+	font-weight: 700;
+	margin-bottom: 30px;
+	text-transform: uppercase;
+}
+/*Текст в пазле*/
+.puzzle-text{
+	font-size: 14px;
+	color: #777777;
+	font-weight: 400;
+	margin-bottom: 30px;
+	line-height: 2;
+}
+/*Номер в пазле*/
+.puzzle-number{
+	font-family: "Times New Roman", arial, sans-serif;
+	font-size: 14px;
+	font-style: italic;#33
+	color: #212121;
+	font-weight: 400;
+}
+/*Клас, обнуляющий отступы*/
+.no-padding{
+	padding: 0 !important;
+}
+/*Треугольник, направленный влево*/
+.left-triangle:before{
+	content: " ";
+	display: inline-block;
+	width: 0;
+	height: 0;
+	border-bottom: 13px solid transparent;
+	border-top: 13px solid transparent;
+	border-right: 15px solid #fff;
+	position: absolute;
+	top: 15%;
+	left: -15px;
+	z-index: 99;
+}
+/*Треугольник, направленный вправо*/
+.right-triangle:before{
+	content: " ";
+	display: inline-block;
+	width: 0;
+	height: 0;
+	border-bottom: 13px solid transparent;
+	border-top: 13px solid transparent;
+	border-left: 15px solid #fff;
+	position: absolute;
+	top: 15%;
+	right: -15px;
+	z-index: 99;
+}
+/*Треугольник, направленный вверх*/
+.top-triangle:before{
+	content: " ";
+	display: inline-block;
+	width: 0;
+	height: 0;
+	border-left: 13px solid transparent;
+	border-right: 13px solid transparent;
+	border-bottom: 15px solid #fff;
+	position: absolute;
+	top: -15px;
+	left: 15%;
+	z-index: 99;
+}
+
+/*Иконка, поверх изображения*/
+.over-image:after{
+	content: " ";
+	display: inline-block;
 	width: 100%;
+	height: 100%;
+	background: url(../images/icon-1.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	-webkit-transition: 0.5s;
+	-o-transition: 0.5s;
+	-moz-transition: 0.5s;
+	-ms-transition: 0.5s;
+	transition: 0.5s;
+}
+/*Появление иконки, поверх изображения, при наведении мыши*/
+.over-image:hover:after{
+	opacity: 1;
 }
 
-.journal-bottom-row img {
+/*Иконка, поверх изображения*/
+.over-image-2:after{
+	content: " ";
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	background: url(../images/icon-2.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	-webkit-transition: 0.5s;
+	-o-transition: 0.5s;
+	-moz-transition: 0.5s;
+	-ms-transition: 0.5s;
+	transition: 0.5s;
+}
+/*Появление иконки, поверх изображения, при наведении мыши*/
+.over-image-2:hover:after{
+	opacity: 1;
+}
+
+/*Иконка, поверх изображения*/
+.over-image-3:after{
+	content: " ";
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	background: url(../images/icon-3.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	-webkit-transition: 0.5s;
+	-o-transition: 0.5s;
+	-moz-transition: 0.5s;
+	-ms-transition: 0.5s;
+	transition: 0.5s;
+}
+/*Появление иконки, поверх изображения, при наведении мыши*/
+.over-image-3:hover:after{
+	opacity: 1;
+}
+
+.travel-with-us{
+	height: 500px;
+	width: 1140px;
+	margin: 0 auto;
+}
+
+.travel-with-us-content {
+	height: 380px;
+	width: 1140px;
+	margin: 0 auto;
+	display: table;
+	/*border: solid 1px red;*/
+}
+
+.travel-section {
 	position: relative;
-	width: 250px;
+}
+
+.map-bg-travel {
+	position: absolute;
+	width: 100%;
+	max-width: 1600px;
+	margin: -90px;
+	z-index: 1;
+}
+
+.travel-with-us .listing {
+	width: 20%;
+	display: table-cell;
+	/*border: solid 1px red;*/
+	color: white;
+}
+
+.travel-with-us-img {
+	position: absolute;
+	padding: 0px 14px;
+	z-index: 2;
+}
+
+.stars {
+	position: absolute;
+	margin: 7px 36px;
+	z-index: 2;
+}
+
+.travel-with-us-title {
+	z-index: 2;
+	position: absolute;
+	font-size: 28px;
+	margin: 160px 34px;
+}
+
+.travel-with-us-text {
+	z-index: 2;
+	position: absolute;
+	font-size: 16px;
+	margin: 204px 34px;
+	width: 160px;
+}
+
+.travel-with-us-old-price {
+	z-index: 2;
+	position: absolute;
+	font-size: 18px;
+	margin: 346px 34px;
+	text-decoration: line-through;
+}
+
+.travel-with-us-new-price {
+	z-index: 2;
+	position: absolute;
+	font-size: 26px;
+	margin: 337px 140px;
+	font-weight: 700;
 }
